@@ -12,6 +12,7 @@ public class RegistrationFormPage {
     WebElement ageField;
     WebElement salaryField;
     WebElement departmentField;
+    WebElement submitButton;
 
     public RegistrationFormPage(WebDriver driver) {
         this.driver = driver;
@@ -39,6 +40,10 @@ public class RegistrationFormPage {
 
     public WebElement getDepartmentField() {
         return driver.findElement(By.id("department"));
+    }
+
+    public WebElement getSubmitButton() {
+        return driver.findElement(By.id("submit"));
     }
 
     //----------------------------------
@@ -71,6 +76,10 @@ public class RegistrationFormPage {
     public void inputDepartment(String department) {
         getDepartmentField().clear();
         getDepartmentField().sendKeys(department);
+    }
+
+    public void clickOnSubmitButton() {
+        getSubmitButton().click();
     }
 
 }

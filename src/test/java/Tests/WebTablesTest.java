@@ -7,6 +7,7 @@ import Pages.RegistrationFormPage;
 import Pages.WebTablesPage;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -33,7 +34,19 @@ public class WebTablesTest extends BaseTest {
         homePage.clickOnElements();
         elementsPage.clickOnWebTables();
         webTablesPage.clickOnAddButton();
-
+        registrationFormPage.inputFirstName("Steve");
+        registrationFormPage.inputLastName("Stevens");
+        registrationFormPage.inputEmail("sstevens@mail.com");
+        registrationFormPage.inputAge("28");
+        registrationFormPage.inputSalary("2000");
+        registrationFormPage.inputDepartment("IT");
+        registrationFormPage.clickOnSubmitButton();
+        Assert.assertTrue(webTablesPage.row().getText().contains("Steve"));
+        Assert.assertTrue(webTablesPage.row().getText().contains("Stevens"));
+        Assert.assertTrue(webTablesPage.row().getText().contains("sstevens@mail.com"));
+        Assert.assertTrue(webTablesPage.row().getText().contains("28"));
+        Assert.assertTrue(webTablesPage.row().getText().contains("2000"));
+        Assert.assertTrue(webTablesPage.row().getText().contains("IT"));
     }
 
 

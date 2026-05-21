@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="399a6f40-84d6-4dfb-ad89-f22b61a4cd87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/ElementsPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Tests/WebTablesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/RegistrationFormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/RegistrationFormPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/WebTablesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/WebTablesPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Tests/WebTablesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/WebTablesTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,11 +40,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "TestNG.WebTablesTest.test.executor": "Run",
+    "TestNG.WebTablesTest.webTables.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.WebTablesTest.webTables">
     <configuration name="WebTablesTest.test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoToolsQA" />
       <extension name="coverage">
@@ -65,8 +64,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WebTablesTest.webTables" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoToolsQA" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tests" />
+      <option name="MAIN_CLASS_NAME" value="Tests.WebTablesTest" />
+      <option name="METHOD_NAME" value="webTables" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.WebTablesTest.webTables" />
         <item itemvalue="TestNG.WebTablesTest.test" />
       </list>
     </recent_temporary>
