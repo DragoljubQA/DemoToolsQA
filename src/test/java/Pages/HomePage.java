@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
+
 public class HomePage {
     WebDriver driver;
 
@@ -13,14 +15,31 @@ public class HomePage {
         this.driver = driver;
     }
 
-    public WebElement getElementsButton() {
-        return driver.findElement(By.className("card-body"));
+    public List<WebElement> getCards() {
+        return driver.findElements(By.className("card-body"));
     }
 
     //----------------------------
 
-    public void clickOnElements() {
-        getElementsButton().click();
+    /*public void clickOnElements() {
+        getElementsButton().get(0).click();
+    }
+
+    public void clickOnForms() {
+        getElementsButton().get(1).click();
+    }
+
+    public void clickOnAlerts() {
+        getElementsButton().get(2).click();
+    }*/
+
+    public void clickOnCard(String cardName) {
+        for (int i = 0; i < getCards().size(); i++) {
+            if(getCards().get(i).getText().equals(cardName)) {
+                getCards().get(i).click();
+                break;
+            }
+        }
     }
 
 }
