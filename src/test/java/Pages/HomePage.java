@@ -45,6 +45,7 @@ public class HomePage extends BaseTest {
 
     public void clickOnCard(String cardName) {
         for (int i = 0; i < getCards.size(); i++) {
+            scrollToElement(getCards.get(i));
             if(getCards.get(i).getText().equals(cardName)) {
                 getCards.get(i).click();
                 break;
