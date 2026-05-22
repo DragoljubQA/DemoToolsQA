@@ -1,7 +1,7 @@
 package Tests;
 
 import Base.BaseTest;
-import Pages.ElementsPage;
+import Pages.Sidebar;
 import Pages.HomePage;
 import Pages.RegistrationFormPage;
 import Pages.WebTablesPage;
@@ -24,29 +24,39 @@ public class WebTablesTest extends BaseTest {
         driver.navigate().to("https://demoqa.com/");
 
         homePage = new HomePage(driver);
-        elementsPage = new ElementsPage(driver);
+        sidebar = new Sidebar(driver);
         webTablesPage = new WebTablesPage(driver);
         registrationFormPage = new RegistrationFormPage(driver);
+
+        homePage.clickOnCard("Elements");
+        sidebar.clickOnSidebarButton("Web Tables");
     }
 
     @Test
-    public void webTables() {
-        homePage.clickOnElements();
-        elementsPage.clickOnWebTables();
-        webTablesPage.clickOnAddButton();
-        registrationFormPage.inputFirstName("Steve");
-        registrationFormPage.inputLastName("Stevens");
-        registrationFormPage.inputEmail("sstevens@mail.com");
-        registrationFormPage.inputAge("28");
-        registrationFormPage.inputSalary("2000");
-        registrationFormPage.inputDepartment("IT");
-        registrationFormPage.clickOnSubmitButton();
-        Assert.assertTrue(webTablesPage.row().getText().contains("Steve"));
-        Assert.assertTrue(webTablesPage.row().getText().contains("Stevens"));
-        Assert.assertTrue(webTablesPage.row().getText().contains("sstevens@mail.com"));
-        Assert.assertTrue(webTablesPage.row().getText().contains("28"));
-        Assert.assertTrue(webTablesPage.row().getText().contains("2000"));
-        Assert.assertTrue(webTablesPage.row().getText().contains("IT"));
+    public void addUsersToWebTables() {
+        for (int i = 1; i <= excelReader.getLastRow("Sheet1"); i++) {
+            String validFirstName = excelReader.getStringData("Sheet1", i, 0);
+            String validLastName = excelReader.getStringData("Sheet1", i, 1);
+            String validEmail = excelReader.getStringData("Sheet1", i, 2);
+            String validAge = String.valueOf(excelReader.getIntegerData("Sheet1", i, 3));
+            String validSalary = String.valueOf(excelReader.getIntegerData("Sheet1", i, 4));
+            String validDepartment = excelReader.getStringData("Sheet1", i, 5);
+            webTablesPage.clickOnAddButton();
+            registrationFormPage.inputFirstName(validFirstName);
+            registrationFormPage.inputLastName(validLastName);
+            registrationFormPage.inputEmail(validEmail);
+            registrationFormPage.inputAge(validAge);
+            registrationFormPage.inputSalary(validSalary);
+            registrationFormPage.inputDepartment(validDepartment);
+            registrationFormPage.clickOnSubmitButton();
+            Assert.assertEquals(webTablesPage.firstName(i).getText(), validFirstName);
+            Assert.assertEquals(webTablesPage.lastName(i).getText(), validLastName);
+            Assert.assertEquals(webTablesPage.email(i).getText(), validEmail);
+            Assert.assertEquals(webTablesPage.age(i).getText(), validAge);
+            Assert.assertEquals(webTablesPage.salary(i).getText(), validSalary);
+            Assert.assertEquals(webTablesPage.department(i).getText(), validDepartment);
+        }
+
     }
 
 

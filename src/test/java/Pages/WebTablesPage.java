@@ -18,11 +18,35 @@ public class WebTablesPage {
     }
 
     public WebElement getTable() {
-        return driver.findElement(By.className("web-tables-wrapper"));
+        return driver.findElement(By.tagName("tbody"));
     }
 
-    public WebElement row() {
-        return getTable().findElement(By.xpath("//tr[4]"));
+    public WebElement row(int i) {
+        return getTable().findElement(By.xpath("//tr["+(i+3)+"]"));
+    }
+
+    public WebElement firstName(int i) {
+        return getTable().findElement(By.xpath("//tr["+(i+3)+"]/td"));
+    }
+
+    public WebElement lastName(int i) {
+        return getTable().findElement(By.xpath("//tr["+(i+3)+"]/td[2]"));
+    }
+
+    public WebElement age(int i) {
+        return getTable().findElement(By.xpath("//tr["+(i+3)+"]/td[3]"));
+    }
+
+    public WebElement email(int i) {
+        return getTable().findElement(By.xpath("//tr["+(i+3)+"]/td[4]"));
+    }
+
+    public WebElement salary(int i) {
+        return getTable().findElement(By.xpath("//tr["+(i+3)+"]/td[5]"));
+    }
+
+    public WebElement department(int i) {
+        return getTable().findElement(By.xpath("//tr["+(i+3)+"]/td[6]"));
     }
 
     //---------------------
