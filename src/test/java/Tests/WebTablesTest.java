@@ -8,6 +8,7 @@ import Pages.WebTablesPage;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -23,10 +24,10 @@ public class WebTablesTest extends BaseTest {
         driver.manage().window().maximize();
         driver.navigate().to("https://demoqa.com/");
 
-        homePage = new HomePage(driver);
-        sidebar = new Sidebar(driver);
-        webTablesPage = new WebTablesPage(driver);
-        registrationFormPage = new RegistrationFormPage(driver);
+        homePage = new HomePage();
+        sidebar = new Sidebar();
+        webTablesPage = new WebTablesPage();
+        registrationFormPage = new RegistrationFormPage();
 
         homePage.clickOnCard("Elements");
         sidebar.clickOnSidebarButton("Web Tables");
@@ -57,6 +58,11 @@ public class WebTablesTest extends BaseTest {
             Assert.assertEquals(webTablesPage.department(i).getText(), validDepartment);
         }
 
+    }
+
+    @AfterMethod
+    public void tearDown() {
+        driver.quit();
     }
 
 

@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="399a6f40-84d6-4dfb-ad89-f22b61a4cd87" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Base/ExcelReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/Sidebar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Base/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/ElementsPage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/RegistrationFormPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/RegistrationFormPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/Sidebar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/Sidebar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/WebTablesPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/WebTablesPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Tests/WebTablesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Tests/WebTablesTest.java" afterDir="false" />
     </list>
@@ -53,7 +50,7 @@
     "TestNG.WebTablesTest.addUsersToWebTables.executor": "Run",
     "TestNG.WebTablesTest.test.executor": "Run",
     "TestNG.WebTablesTest.webTables.executor": "Run",
-    "git-widget-placeholder": "AddingWebTablesTest",
+    "git-widget-placeholder": "pageFactoryElements",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
